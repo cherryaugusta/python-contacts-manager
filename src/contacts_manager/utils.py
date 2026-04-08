@@ -2,7 +2,7 @@ import json
 import logging
 import os
 import uuid
-from datetime import datetime
+from datetime import datetime, UTC
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
@@ -35,7 +35,7 @@ def setup_logging() -> logging.Logger:
 
 
 def utc_now_iso() -> str:
-    return datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    return datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
 def generate_id(prefix: str) -> str:
