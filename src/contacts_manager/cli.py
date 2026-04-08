@@ -17,7 +17,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    subparsers.add_parser("seed", help="Seed realistic demo contacts into empty storage.")
+    subparsers.add_parser("seed", help="Seed fictional demo contacts into empty storage.")
 
     list_parser = subparsers.add_parser("list", help="List all contacts.")
     list_parser.add_argument("--tag", default="", help="Optional tag filter.")
@@ -102,7 +102,11 @@ def main() -> None:
         elif args.command == "list":
             contacts = service.list_contacts()
             if args.tag:
-                contacts = [contact for contact in contacts if args.tag.strip().lower() in contact.tags]
+                contacts = [
+                    contact
+                    for contact in contacts
+                    if args.tag.strip().lower() in contact.tags
+                ]
             print_contacts(contacts)
 
         elif args.command == "add":
