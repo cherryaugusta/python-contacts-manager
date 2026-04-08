@@ -56,7 +56,7 @@ python-contacts-manager/
     ├── test_services.py
     ├── test_storage.py
     └── test_validation.py
-````
+```
 
 ## Architecture
 
@@ -167,20 +167,20 @@ python main.py list --tag client
 ### Add a contact
 
 ```powershell
-python main.py add --full-name "Oliver Bennett" --email "oliver.bennett@bennettconsulting.co.uk" --phone "+44 20 7946 0104" --company "Bennett Consulting" --job-title "Principal Consultant" --tags "prospect,consulting" --next-follow-up "2026-04-18"
+python main.py add --full-name "Eirik Nozomi Valdsen" --email "eirik.nozomi.valdsen@example.com" --phone "+00 0000 000004" --company "Pale Summit Works" --job-title "Principal Consultant" --tags "prospect,consulting" --next-follow-up "2026-04-18"
 ```
 
 ### Search contacts
 
 ```powershell
-python main.py search --query oliver
+python main.py search --query eirik
 python main.py search --tag priority
 ```
 
 ### Update a contact
 
 ```powershell
-python main.py update --contact-id "con_REPLACE_ME" --full-name "Oliver Bennett" --email "oliver.bennett@bennettconsulting.co.uk" --phone "+44 20 7946 0104" --company "Bennett Consulting Group" --job-title "Principal Consultant" --tags "prospect,consulting,priority" --next-follow-up "2026-04-14"
+python main.py update --contact-id "con_REPLACE_ME" --full-name "Eirik Nozomi Valdsen" --email "eirik.nozomi.valdsen@example.com" --phone "+00 0000 000004" --company "Pale Summit Works" --job-title "Principal Consultant" --tags "prospect,consulting,priority" --next-follow-up "2026-04-14"
 ```
 
 ### Add a note to a contact
@@ -263,7 +263,7 @@ Expected screenshot files:
 
 2. `02-search-and-update.png`
 
-   * run `python main.py search --query amina`
+   * run `python main.py search --query sigrid`
    * run an `update` command with a real `contact_id`
    * run `python main.py add-note --contact-id "con_REPLACE_ME" --note "Requested proposal follow-up after discovery meeting."`
 

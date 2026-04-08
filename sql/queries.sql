@@ -11,10 +11,10 @@ INSERT INTO contacts (
     updated_at
 ) VALUES (
     'con_a1b2c3d4e5',
-    'Amina Rahman',
-    'amina.rahman@northbridgeadvisory.co.uk',
-    '+44 20 7946 0101',
-    'Northbridge Advisory',
+    'Sigrid Tomoe Haldorsen',
+    'sigrid.tomoe.haldorsen@example.com',
+    '+00 0000 000001',
+    'Aurora Ledger Atelier',
     'Operations Manager',
     '2026-04-15',
     NOW(),
@@ -43,7 +43,7 @@ WHERE contact_id = 'con_a1b2c3d4e5';
 -- Update a contact
 UPDATE contacts
 SET
-    company = 'Northbridge Advisory Ltd',
+    company = 'Aurora Ledger Atelier North',
     job_title = 'Senior Operations Manager',
     updated_at = NOW()
 WHERE contact_id = 'con_a1b2c3d4e5';
@@ -61,7 +61,7 @@ INSERT INTO contact_notes (
 ) VALUES (
     'note_12345abcde',
     'con_a1b2c3d4e5',
-    'Requested pricing deck after introduction call.',
+    'Requested pricing summary after introduction call.',
     NOW()
 );
 
@@ -69,10 +69,10 @@ INSERT INTO contact_notes (
 SELECT *
 FROM contacts
 WHERE
-    full_name ILIKE '%amina%'
-    OR email ILIKE '%amina%'
-    OR company ILIKE '%northbridge%'
-    OR phone ILIKE '%0101%'
+    full_name ILIKE '%sigrid%'
+    OR email ILIKE '%sigrid%'
+    OR company ILIKE '%aurora%'
+    OR phone ILIKE '%000001%'
 ORDER BY full_name ASC;
 
 -- Find contacts with follow-ups due on or before a date

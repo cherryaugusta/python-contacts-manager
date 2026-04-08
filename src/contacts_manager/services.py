@@ -201,36 +201,36 @@ class ContactService:
 
         seeded = [
             self.create_contact(
-                full_name="Amina Rahman",
-                email="amina.rahman@northbridgeadvisory.co.uk",
-                phone="+44 20 7946 0101",
-                company="Northbridge Advisory",
+                full_name="Sigrid Tomoe Haldorsen",
+                email="sigrid.tomoe.haldorsen@example.com",
+                phone="+00 0000 000001",
+                company="Aurora Ledger Atelier",
                 job_title="Operations Manager",
                 tags=["client", "priority"],
                 next_follow_up="2026-04-15",
             ),
             self.create_contact(
-                full_name="Daniel Foster",
-                email="daniel.foster@fosterlegal.co.uk",
-                phone="+44 20 7946 0102",
-                company="Foster Legal",
+                full_name="Leif Katsumi Thoresen",
+                email="leif.katsumi.thoresen@example.com",
+                phone="+00 0000 000002",
+                company="Fjord Kestrel Counsel",
                 job_title="Partner",
                 tags=["prospect", "legal"],
                 next_follow_up="2026-04-10",
             ),
             self.create_contact(
-                full_name="Priya Shah",
-                email="priya.shah@vertexfinance.co.uk",
-                phone="+44 20 7946 0103",
-                company="Vertex Finance",
+                full_name="Ingrid Suzu Bjornsdatter",
+                email="ingrid.suzu.bjornsdatter@example.com",
+                phone="+00 0000 000003",
+                company="Mist Harbor Metrics",
                 job_title="Account Director",
                 tags=["client", "finance"],
                 next_follow_up="2026-04-12",
             ),
         ]
 
-        self.add_note(seeded[0].contact_id, "Intro call completed. Requested pricing deck.")
-        self.add_note(seeded[1].contact_id, "Met at London networking breakfast.")
+        self.add_note(seeded[0].contact_id, "Intro call completed. Requested pricing summary.")
+        self.add_note(seeded[1].contact_id, "Met during an industry networking session.")
         self.add_note(seeded[2].contact_id, "Needs quarterly follow-up on reporting support.")
 
         return self.storage.load_contacts()
