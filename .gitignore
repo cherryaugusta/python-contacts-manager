@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environment
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# Runtime data
+logs/*.log
+data/*.json
+
+# OS files
+Thumbs.db
+.DS_Store
